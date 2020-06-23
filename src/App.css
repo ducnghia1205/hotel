@@ -1,38 +1,165 @@
+body, html {
+  height: 100%;
+  direction: ltr;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica Neue, Arial, "sans-serif";
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #121029;
+  text-align: left;
+  background-color: #f9f7fd;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-text-size-adjust: none;
+  touch-action: manipulation;
+  font-feature-settings: "liga" 0;
+  overflow-y: scroll;
+  position: relative;
+}
+
+.h3, h3 {
+  font-size: 1.75rem;
+}
+
 .App {
-  text-align: center;
+  flex: 1 1 auto;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.horizontalMenucontainer {
+  background-size: cover;
+  overflow: hidden!important;
+  background-attachment: fixed;
+  background-position: 50% 0;
+  background-repeat: no-repeat;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.page {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  min-height: 100%;
 }
 
-.App-link {
-  color: #61dafb;
+.page-main {
+  position: relative;
+  overflow: hidden;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.sticky {
+  width: 100%;
+}
+
+.horizontal-main {
+  background: #0b2239;
+}
+
+.horizontal-main {
+  width: 100%;
+  position: relative;
+  border-bottom: 1px solid transparent;
+  border-top: 1px solid transparent!important;
+}
+
+.horizontal-mainwrapper {
+  margin: 0 auto;
+}
+
+.horizontalMenu {
+  color: #fff;
+  padding: 0;
+  display: block;
+}
+
+.horizontalMenu:after, .horizontalMenu:before {
+  content: "";
+  display: table;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.horizontalMenu>.horizontalMenu-list>li {
+  text-align: center;
+  display: block;
+  padding: 0;
+  margin: 0;
+  float: left;
+}
+
+.horizontalMenu>.horizontalMenu-list>li:first-child a {
+  border-left: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.horizontalMenu>.horizontalMenu-list>li>a {
+  display: block;
+  padding: 1rem 1.65rem;
+  text-decoration: none;
+  position: relative;
+  margin: 0;
+  color: #fff;
+  border-left: 1px solid hsla(0, 0%, 100%, .1);
+}
+
+.horizontalMenu>.horizontalMenu-list>li>a i {
+  color: #04cad0;
+}
+
+.horizontalMenu>.horizontalMenu-list>li>a i {
+  display: inline-block;
+  line-height: inherit;
+  margin-right: 9px;
+  font-size: 16px;
+}
+
+.overlapblackbg {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.horizontalMenu>.horizontalMenu-list {
+  text-align: left;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.content-area {
+  min-height: 75vh;
+}
+
+.relative {
+  position: relative!important;
+}
+
+.page-main:after {
+  content: "";
+  height: 280px;
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  top: 0;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, .2);
+  overflow: hidden;
+}
+
+.nav-tabs .nav-link.active, .nav-tabs .nav-link:hover:not(.disabled), .page-main:after {
+  background: #564ec1;
+}
+
+.footer {
+  background: #fff;
+  border-top: 1px solid transparant;
+  font-size: .875rem;
+  padding: 1.25rem 0;
+  color: #121029;
 }

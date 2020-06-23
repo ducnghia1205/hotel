@@ -1,0 +1,26 @@
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 178, 9, .7);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 178, 9, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 178, 9, 0);
+  }
+}
+
+.pulse {
+  display: block;
+  position: absolute;
+  top: .3rem;
+  right: .6rem;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #ffb209;
+  cursor: pointer;
+  box-shadow: 0 0 0 rgba(255, 178, 9, .9);
+  -webkit-animation: pulse 2s infinite;
+  animation: pulse 2s infinite;
+}
